@@ -1,6 +1,8 @@
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 export EDITOR=vim
+declare -r BREW_PREFIX
+BREW_PREFIX="$( brew --prefix )"
 
 PATH="/Users/lucasbraune/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/lucasbraune/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -17,11 +19,13 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.3
 
 # Enable autocomplete
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "${BREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey "^[[A" history-beginning-search-backward # arrow up
 bindkey "^[[B" history-beginning-search-forward # arrow down
 
-source /Users/lucasbraune/.config/broot/launcher/bash/br
+source "${BREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source ~/.config/broot/launcher/bash/br
 
 export FZF_DEFAULT_OPTS='--bind=ctrl-d:preview-page-down,ctrl-u:preview-page-up'
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
