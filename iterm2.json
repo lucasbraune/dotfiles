@@ -1,9 +1,5 @@
 {
-  "Ansi 6 Color" : {
-    "Green Component" : 0.65859752893447876,
-    "Red Component" : 0.26240241527557373,
-    "Blue Component" : 0.81416356563568115
-  },
+  "Guid" : "3B574B79-9648-4A70-9689-98E0546A493E",
   "Tags" : [
 
   ],
@@ -12,17 +8,22 @@
     "Red Component" : 0,
     "Blue Component" : 1
   },
+  "Ansi 6 Color" : {
+    "Green Component" : 0.65859752893447876,
+    "Red Component" : 0.26240241527557373,
+    "Blue Component" : 0.81416356563568115
+  },
   "Ansi 2 Color" : {
     "Green Component" : 0.88415688276290894,
     "Red Component" : 0.59543848037719727,
     "Blue Component" : 0.13826943933963776
   },
-  "Normal Font" : "SourceCodeProForPowerline-Medium 14",
   "Bold Color" : {
     "Green Component" : 1,
     "Red Component" : 1,
     "Blue Component" : 1
   },
+  "Normal Font" : "SourceCodeProForPowerline-Medium 14",
   "Ansi 3 Color" : {
     "Green Component" : 0.83169490098953247,
     "Red Component" : 0.87502807378768921,
@@ -33,9 +34,10 @@
     "Red Component" : 0.061529088765382767,
     "Blue Component" : 0.81389641761779785
   },
-  "Right Option Key Sends" : 2,
   "Rows" : 25,
   "Default Bookmark" : "No",
+  "Right Option Key Sends" : 2,
+  "AWDS Tab Option" : "No",
   "Cursor Guide Color" : {
     "Red Component" : 0.70214027166366577,
     "Color Space" : "sRGB",
@@ -51,6 +53,7 @@
     "Blue Component" : 0.3713659942150116
   },
   "Ambiguous Double Width" : false,
+  "AWDS Pane Option" : "Recycle",
   "Jobs to Ignore" : [
     "rlogin",
     "ssh",
@@ -69,19 +72,22 @@
   },
   "Working Directory" : "\/Users\/lucasbraune",
   "Blinking Cursor" : false,
-  "Disable Window Resizing" : true,
+  "AWDS Window Option" : "No",
   "Sync Title" : false,
   "Prompt Before Closing 2" : false,
   "BM Growl" : true,
-  "Command" : "",
+  "Command" : "\/usr\/local\/bin\/tmux -CC",
   "Description" : "Default",
-  "Mouse Reporting" : false,
+  "AWDS Pane Directory" : "",
+  "Disable Window Resizing" : true,
   "Screen" : -1,
   "Selection Color" : {
     "Green Component" : 0.8353000283241272,
     "Red Component" : 0.70980000495910645,
     "Blue Component" : 1
   },
+  "Mouse Reporting" : false,
+  "AWDS Window Directory" : "",
   "Columns" : 200,
   "Idle Code" : 0,
   "Ansi 13 Color" : {
@@ -391,7 +397,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.35915297269821167
   },
-  "Custom Directory" : "No",
+  "Custom Directory" : "Advanced",
   "Ansi 5 Color" : {
     "Green Component" : 0,
     "Red Component" : 0.52941179275512695,
@@ -403,20 +409,20 @@
     "Red Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527
   },
-  "Ansi 8 Color" : {
-    "Green Component" : 0.33333333333333331,
-    "Red Component" : 0.33333333333333331,
-    "Blue Component" : 0.33333333333333331
-  },
+  "AWDS Tab Directory" : "",
   "Ansi 9 Color" : {
     "Green Component" : 0.40106064081192017,
     "Red Component" : 0.9644390344619751,
     "Blue Component" : 0.61410599946975708
   },
+  "Ansi 8 Color" : {
+    "Green Component" : 0.33333333333333331,
+    "Red Component" : 0.33333333333333331,
+    "Blue Component" : 0.33333333333333331
+  },
   "Ansi 0 Color" : {
     "Green Component" : 0.070588238537311554,
     "Red Component" : 0.070588238537311554,
     "Blue Component" : 0.070588238537311554
-  },
-  "Guid" : "3B574B79-9648-4A70-9689-98E0546A493E"
+  }
 }
