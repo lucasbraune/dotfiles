@@ -13,5 +13,5 @@ Clone this repository and run `./install`. This will
   repository; and
 - install Vim plugins.
 
-Add machine-specific configuration to `~/.zshrc_local`. That script is included
-by the `zshrc` script in this repository. 
+Add machine-specific configuration to `~/.zshrc_local` and `./gitconfig_local`.
+These files are included by their counterparts in this repository.

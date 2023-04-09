@@ -13,6 +13,7 @@ brew bundle install --no-lock --no-upgrade
 ln -s -i "$(pwd)"/zshrc ~/.zshrc
 ln -s -i "$(pwd)"/vimrc ~/.vimrc
 ln -s -i -n "$(pwd)"/vim ~/.vim
+ln -s -i "$(pwd)"/gitconfig ~/.gitconfig
 
 vim -c PlugInstall -c qa!
 
