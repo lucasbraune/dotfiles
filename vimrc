@@ -110,6 +110,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
 Plug 'dense-analysis/ale'
+Plug 'lifepillar/vim-mucomplete'
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 nnoremap <C-p> :Files<CR>
