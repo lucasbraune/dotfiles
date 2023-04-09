@@ -34,5 +34,5 @@ setopt prompt_subst
 zstyle ':vcs_info:git:*' formats ' (%b)'
 PROMPT='%~${vcs_info_msg_0_} %# '
 
-[[ -f ./.zshrc_local ]] && source ./.zshrc_local
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
