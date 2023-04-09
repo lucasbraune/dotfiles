@@ -1,14 +1,13 @@
 export EDITOR=vim
-
-BREW_PREFIX="$( brew --prefix )"
-readonly BREW_PREFIX
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+alias ls="ls --color=auto"
 
 # Enable autocomplete
-source "${BREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$( brew --prefix )"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey "^[[A" history-beginning-search-backward # arrow up
 bindkey "^[[B" history-beginning-search-forward # arrow down
 
-source "${BREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$( brew --prefix )"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.config/broot/launcher/bash/br
 
@@ -26,9 +25,6 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
-
-alias ls="ls -G"
-#export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Custom shell prompt
 autoload -Uz vcs_info
