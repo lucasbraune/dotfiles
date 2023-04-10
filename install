@@ -1,19 +1,27 @@
 #!/bin/bash
 
-command_exists() {
+cmd_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-if ! command_exists brew; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+create_symlinks() {
+    local dotfile
+    for dotfile in zshrc vimrc vim gitfig tmux.conf; do
+        ln -s -i -n {"$(pwd)"/,~/.}"${dotfile}"
+    done
+}
+
+create_symlinks
+
+if cmd_exists brew; then
+    brew bundle install --no-lock --no-upgrade
+else
+    echo "Homebrew is not in the search path. Skipping installation of packages."
 fi
 
-brew bundle install --no-lock --no-upgrade
-
-ln -s -i "$(pwd)"/zshrc ~/.zshrc
-ln -s -i "$(pwd)"/vimrc ~/.vimrc
-ln -s -i -n "$(pwd)"/vim ~/.vim
-ln -s -i "$(pwd)"/gitconfig ~/.gitconfig
-
-vim -c PlugInstall -c qa!
+if cmd_exists vim; then
+    vim -c PlugInstall -c qa!
+else
+    echo "Vim is not in the search path. Skipping installation of plugins."
+fi
 
