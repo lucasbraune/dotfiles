@@ -16,6 +16,7 @@
 
 [merge]
     conflictstyle = diff3
+	tool = vimdiff
 
 [diff]
     colorMoved = default
@@ -25,3 +26,13 @@
 [include]
     path = ~/.gitconfig_local
 
+[format]
+	pretty = oneline
+[log]
+	abbrevCommit = true
+[clean]
+	requireForce = false
+[status]
+	short = true
+[push]
+	autoSetupRemote = true
