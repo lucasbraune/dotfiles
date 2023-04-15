@@ -21,8 +21,11 @@ fi
 
 git submodule init
 git submodule update
+
 mkdir -p vim/autoload
-cp {vim-plug,vim/autoload}/plug.vim
+cp vim-plug/plug.vim vim/autoload
+mkdir -p vim/colors
+cp molokai/colors/molokai.vim vim/colors
 
 if cmd_exists vim; then
     vim -c PlugInstall -c qa!
