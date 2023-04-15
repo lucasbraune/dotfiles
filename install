@@ -7,7 +7,7 @@ cmd_exists() {
 create_symlinks() {
     local dotfile
     for dotfile in zshrc vimrc vim gitfig tmux.conf; do
-        ln -sin {,~/.}"${dotfile}"
+	    ln -sin {$(pwd)/,~/.}"${dotfile}"
     done
 }
 
