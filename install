@@ -7,7 +7,7 @@ cmd_exists() {
 create_symlinks() {
     local dotfile
     for dotfile in zshrc vimrc vim gitfig tmux.conf; do
-        ln -s -i -n {"$(pwd)"/,~/.}"${dotfile}"
+        ln -sin {,~/.}"${dotfile}"
     done
 }
 
@@ -18,6 +18,11 @@ if cmd_exists brew; then
 else
     echo "Homebrew is not in the search path. Skipping installation of packages."
 fi
+
+git submodule init
+git submodule update
+mkdir -p vim/autoload
+cp {vim-plug,vim/autoload}/plug.vim
 
 if cmd_exists vim; then
     vim -c PlugInstall -c qa!
