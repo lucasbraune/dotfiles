@@ -1,4 +1,4 @@
 *.swp
 vim/plugged
-vim/autoload/vim.plug
+vim/autoload/plug.vim
 
