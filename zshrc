@@ -1,5 +1,6 @@
 export EDITOR=vim
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export BAT_PAGER='less -R'
 alias ls="ls --color=auto"
 
 # Enable autocomplete
@@ -32,7 +33,7 @@ precmd_vcs_info() { vcs_info; }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats ' (%b)'
-PROMPT='%~${vcs_info_msg_0_} %# '
+PS1='%F{cyan}%~${vcs_info_msg_0_} %#%f '
 
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
