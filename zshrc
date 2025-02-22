@@ -1,7 +1,15 @@
 export EDITOR=vim
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
 export BAT_PAGER='less -R'
 alias ls="ls --color=auto"
+
+function idea() {
+    command idea "$@" 1>/dev/null 2>&1 &
+}
+
+# Vi mode
+bindkey -v
+
 
 # Enable autocomplete
 source "$( brew --prefix )"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -37,3 +45,6 @@ PS1='%F{cyan}%~${vcs_info_msg_0_} %#%f '
 
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
+
+source /Users/lucasbraune/.config/broot/launcher/bash/br
+export PATH="/usr/local/opt/ruby/bin:$PATH"
