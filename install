@@ -14,7 +14,7 @@ create_symlinks() {
 create_symlinks
 
 if cmd_exists brew; then
-    brew bundle install --no-lock --no-upgrade
+    brew bundle install
 else
     echo "Homebrew is not in the search path. Skipping installation of packages."
 fi
@@ -32,4 +32,6 @@ if cmd_exists vim; then
 else
     echo "Vim is not in the search path. Skipping installation of plugins."
 fi
+
+./install_nerd_font.sh
 
